@@ -1,10 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders learn react link", () => {
-  render(<App />);
+describe("App component", () => {
+  test("Should show 'Todo App' heading", () => {
+    render(<App />);
 
-  const helloText = screen.getByText(/Hello World!/i);
+    const heading = screen.getByText(/Todo App/i);
 
-  expect(helloText).toBeInTheDocument();
+    expect(heading).toBeInTheDocument();
+  });
+
+  test("Should show input to add new todo", () => {
+    render(<App />);
+
+    const addNewInput = screen.getByPlaceholderText(/Add a new task/i);
+
+    expect(addNewInput).toBeInTheDocument();
+  });
 });
