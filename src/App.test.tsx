@@ -9,4 +9,12 @@ describe("App component", () => {
 
     expect(heading).toBeInTheDocument();
   });
+  
+  test("Should show input to add new todo", () => {
+    render(<App />);
+
+    const addNewInput = screen.getByPlaceholderText(/Add a new task/i);
+
+    expect(addNewInput).toBeInTheDocument();
+  });
 });
