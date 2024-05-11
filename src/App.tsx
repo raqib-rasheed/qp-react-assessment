@@ -9,8 +9,9 @@ function App() {
   const todos = useSelector((state: RootState) => state.todos);
   return (
     <div className="App">
-      <AddTodo />
       <h1>Todo App</h1>
+      <AddTodo />
+      <p></p>
       <TodoList todos={todos.todos} />
     </div>
   );
