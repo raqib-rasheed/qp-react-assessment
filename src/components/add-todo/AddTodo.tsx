@@ -14,11 +14,19 @@ const AddTodo: React.FC = () => {
     }
   };
 
+  const handleEnterKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const enterKeyCode = "Enter";
+    if (e.code === enterKeyCode && text) {
+      handleAddTodo();
+    }
+  };
+
   return (
     <div>
       <input
         type="text"
         value={text}
+        onKeyDown={handleEnterKey}
         onChange={(e) => setText(e.target.value)}
         placeholder="Add a new task"
       />
