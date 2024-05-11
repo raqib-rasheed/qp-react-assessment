@@ -4,5 +4,5 @@ import { Provider } from "react-redux";
 import { ReactNode } from "react";
 
 export function renderWithProvider(children: ReactNode) {
-  return render(<Provider store={store}>{children}</Provider>);
+  return { store, ...render(<Provider store={store}>{children}</Provider>) };
 }
