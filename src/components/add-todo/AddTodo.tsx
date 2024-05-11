@@ -1,7 +1,18 @@
-import { useState } from "react";
+// components/AddTodo.tsx
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../../store/todoSlices";
 
-const AddTodo = () => {
+const AddTodo: React.FC = () => {
   const [text, setText] = useState("");
+  const dispatch = useDispatch();
+
+  const handleAddTodo = () => {
+    if (text.trim() !== "") {
+      dispatch(addTodo(text));
+      setText("");
+    }
+  };
 
   return (
     <div>
@@ -11,6 +22,7 @@ const AddTodo = () => {
         onChange={(e) => setText(e.target.value)}
         placeholder="Add a new task"
       />
+      <button onClick={handleAddTodo}>Add Todo</button>
     </div>
   );
 };
