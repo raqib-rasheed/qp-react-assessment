@@ -1,0 +1,47 @@
+ App.css .checkbox-container {
+     display: inline-block;
+     vertical-align: middle;
+     position: relative;
+     cursor: pointer;
+ }
+
+ .checkbox-input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+ }
+
+ .checkbox-checkmark {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 25px;
+     width: 25px;
+     background-color: #eee;
+     border-radius: 5px;
+ }
+
+ .checkbox-input:checked+.checkbox-checkmark:after {
+     content: '';
+     position: absolute;
+     display: block;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 10px;
+     height: 10px;
+     background-color: #4caf50;
+     border-radius: 2px;
+ }
+
+ .checkbox-label {
+     margin-left: 35px;
+     height: 100%;
+ }
+
+ .TodoItem {
+     height: 100%;
+     overflow: auto;
+     display: flex;
+     align-items: center;
+ }
