@@ -1,15 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import App from "./App";
-import { Provider } from "react-redux";
-import { store } from "./store/store";
+import { renderWithProvider } from "./testUtils";
 
 describe("App component", () => {
   test("Should show 'Todo App' heading", () => {
-    render(
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
+    renderWithProvider(<App />);
 
     const heading = screen.getByText(/Todo App/i);
 
@@ -17,11 +12,7 @@ describe("App component", () => {
   });
 
   test("Should show input to add new todo", () => {
-    render(
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
+    renderWithProvider(<App />);
 
     const addNewInput = screen.getByPlaceholderText(/Add a new task/i);
 
