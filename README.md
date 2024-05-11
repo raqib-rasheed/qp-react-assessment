@@ -1,5 +1,8 @@
-## qp-react-assessment
-- Following points are handled in the project.
+## [qp-react-assessment](https://scintillating-daifuku-771575.netlify.app)
+
+Visit deployed project - [https://scintillating-daifuku-771575.netlify.app](https://scintillating-daifuku-771575.netlify.app)
+
+##### Following points are handled in the project.
 1. System supports large set of todo without significant lag or slowdown (used react-virtualized)
 2. System allows users to mark todo as completed or incomplete by toggling checkboxes
 3. Project utilized TypeScript for type-checking and enhanced code quality.
