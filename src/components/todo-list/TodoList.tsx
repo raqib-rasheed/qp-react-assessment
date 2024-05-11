@@ -15,7 +15,8 @@ const TodoList: React.FC<TodoListProps> = ({ todos }) => {
 
   return (
     <List
-      rowHeight={20}
+      className="todoList"
+      rowHeight={80}
       height={400}
       width={600}
       rowCount={todos.length}

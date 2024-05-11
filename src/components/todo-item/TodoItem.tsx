@@ -1,8 +1,7 @@
-// components/TodoItem.tsx
 import React from "react";
 import { useDispatch } from "react-redux";
-import { toggleTodo } from "../../store/todoSlices";
-import { Todo } from "../../models/Todo.model";
+import { Todo, toggleTodo } from "../../store/todoSlices";
+import "./styles.css";
 
 interface TodoItemProps {
   todo: Todo;
@@ -17,9 +16,18 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, style }) => {
   };
 
   return (
-    <div style={style}>
-      <input type="checkbox" checked={todo.completed} onChange={handleToggle} />
+    <div className="TodoItem" style={style}>
+      <label className="checkbox-container">
+        <input
+          type="checkbox"
+          className="checkbox-input"
+          checked={todo.completed}
+          onChange={handleToggle}
+        />
+        <span className="checkbox-checkmark"></span>
+      </label>
       <span
+        className="checkbox-label"
         style={{ textDecoration: todo.completed ? "line-through" : "none" }}
       >
         {todo.text}

@@ -11,7 +11,6 @@ function App() {
     <div className="App">
       <h1>Todo App</h1>
       <AddTodo />
-      <p></p>
       <TodoList todos={todos.todos} />
     </div>
   );
