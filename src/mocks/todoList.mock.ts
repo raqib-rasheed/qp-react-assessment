@@ -1,7 +1,9 @@
-import { Todo } from '../models/Todo.model';
+import { Todo } from "../models/Todo.model";
 
-export const mockTodoList:Todo[] = [{
-completed:true,
-id:1,
-text:'Do laudry'
-}]
+export const mockTodo = {
+  completed: true,
+  id: 1,
+  text: "Do laudry",
+};
+
+export const mockTodoList: Todo[] = [mockTodo];
